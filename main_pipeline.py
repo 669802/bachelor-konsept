@@ -6,7 +6,9 @@ print("✅ Starter hovedpipen for alle filer samtidig...")
 
 # Opprett nødvendige mapper
 os.makedirs("output", exist_ok=True)
-#os.makedirs("temp", exist_ok=True)
+os.makedirs("storage/raw_data", exist_ok=True)
+os.makedirs("storage/filtered_data", exist_ok=True)
+os.makedirs("storage/processed_data", exist_ok=True)
 
 # Hent alle tekstfiler fra input-mappen
 input_files = os.listdir("input")
