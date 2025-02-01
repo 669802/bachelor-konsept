@@ -1,53 +1,28 @@
-├── input/
-│   ├── input0.png
-│   ├── input1.png
-│   ├── input2.txt
-│   ├── input3.txt
-│   ├── input4.log
-│   └── input5.csv
-├── output/
-├── modules/
-│   ├── __init__.py
-│   ├── module0/
-│   │   ├── __init__.py
-│   │   ├── move_file.py
-│   │   └── pipeline.py
-│   ├── module1/
-│   │   ├── __init__.py
-│   │   ├── move_file.py
-│   │   └── pipeline.py
-│   ├── module2/
-│   │   ├── __init__.py
-│   │   ├── move_file.py
-│   │   └── pipeline.py
-│   ├── module3/
-│   │   ├── __init__.py
-│   │   ├── move_file.py
-│   │   └── pipeline.py
-│   └── module4/
-│   │   ├── __init__.py
-│   │   ├── move_file.py
-│   │   └── pipeline.py
-├── src
-│   ├── assets
-│   │   │   ├── images
-│   │   │   └── logo.svg
-│   ├── constants
-│   │   └── data.js
-│   ├── components
-│   │   ├── app
-│   │   │   ├── App.css
-│   │   │   ├── App.jsx
-│   │   │   └── App.test.js
-│   │   └── index.js
-│   ├── utils
-│   │   ├── ...
-│   │   └── index.js
-│   ├── index.css
-│   ├── index.js
-│   ├── serviceWorker.js
-│   └── setupTests.js
-├── .gitignore
-├── package.json
-└── README.md
-└── yarn.lock
+file_pipeline_project/
+│── input/
+│   │── file1.txt  # 🎯 Startfilen
+│── output/
+│── temp/
+│── main_pipeline.py  # 🚀 Hovedpipeline
+│── modules/
+│   │── __init__.py
+│   │── module1/
+│   │   │── __init__.py
+│   │   │── pipeline.py  # 🚀 Pipeline for Modul 1
+│   │   │── move_file.py
+│   │   │── copy_file.py
+│   │   │── rename_file.py
+│   │   │── modify_content.py
+│   │── module2/
+│   │   │── __init__.py
+│   │   │── pipeline.py  # 🚀 Pipeline for Modul 2
+│   │   │── move_file.py
+│   │   │── copy_file.py
+│   │   │── rename_file.py
+│   │   │── modify_content.py
+│── tests/
+│── .github/
+│   └── workflows/
+│       └── pipeline.yml
+│── requirements.txt
+│── README.md
