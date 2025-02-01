@@ -52,7 +52,10 @@ root
 │  └─ processed_data/
 ├─ tests/                 # Tester til system
 │  └─ test_pipeline.py
-├─ main_pipeline.py       # Hovedprogrammet til pipelinet
+├─ templates/             # Interface til nettsiden
+│  └─ index.html
+├─ main_pipeline.py       # Pipelineprogrammet
+├─ app_pipeline.py        # Hovedprogrammet som starter server og interface
 ├─ README.md
 └─ requirements.txt
 ```
