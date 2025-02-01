@@ -1,4 +1,8 @@
 ```
+pip install -r requirements.txt
+```
+
+```
 root
 ├─ input/                 # Filene som skal prosesseres
 │  ├─ input0.png
