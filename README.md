@@ -1,32 +1,32 @@
 ```
-📦 root
-├─ input/
+root
+├─ input/              # Filene som skal prosesseres
 │  ├─ input0.png
 │  ├─ input1.png
 │  ├─ input2.txt
 │  ├─ input3.txt
 │  ├─ input4.log
 │  └─ input5.csv
-├─ output/
+├─ output/            # Filene som er ferdig prosessert
 ├─ modules/
 │  ├─ __init__py
-│  ├─ module0/
+│  ├─ module0/        # Setter filene tilbake til utgangspunkt
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ move_file.py
-│  ├─ module1/
+│  ├─ module1/        # Flytter filene fra input/ til storage/raw_data/
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ move_file.py
-│  ├─ module2
+│  ├─ module2         # Kopierer gyldige filer fra storage/raw_data/ til storage/filtered_data/
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ copy_file.py
-│  ├─ module3
+│  ├─ module3         # Nytt navn til filene fra storage/filtered_data/ og plassert i storage/processed_data/
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ rename_file.py
-│  └─ module4/
+│  └─ module4/        # Flytter filene fra storage/processed_data/ til output/
 │     ├─ __init__.py
 │     ├─ pipeline.py
 │     └─ move_file.py
