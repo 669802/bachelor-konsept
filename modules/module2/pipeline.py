@@ -14,8 +14,7 @@ input_dir = "storage/raw_data"
 output_dir = "storage/filtered_data"
 
 if __name__ == "__main__":
-    os.makedirs(output_dir, exist_ok=True)
-
+    
     copy_module = CopyFileModule()
     
     for file in sys.argv[1:]:  # Itererer over ALLE filene

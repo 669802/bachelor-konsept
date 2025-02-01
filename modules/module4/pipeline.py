@@ -11,8 +11,7 @@ input_dir = "storage/processed_data"
 output_dir = "output"
 
 if __name__ == "__main__":
-    os.makedirs(output_dir, exist_ok=True)
-
+    
     move_module = MoveFileModule()
 
     for file in sys.argv[1:]:  # Itererer over ALLE filene

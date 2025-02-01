@@ -11,11 +11,10 @@ input_dir = "storage/filtered_data"
 output_dir = "storage/processed_data"
 
 if __name__ == "__main__":
+    
     rename_module = RenameFileModule()
 
     for file in sys.argv[1:]:  # Itererer over ALLE filene
-        if file == "filtered_data_log.txt":
-            continue
         input_file = os.path.join(input_dir, file)
         new_name = f"processed_{file}"
         rename_module.process(input_file, output_dir, new_name)
