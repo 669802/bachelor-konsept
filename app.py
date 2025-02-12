@@ -26,7 +26,7 @@ def upload_file():
             file.save(file_path)
 
             # 🟢 Kjør pipelinen etter opplasting
-            subprocess.run(["python3", "main_pipeline.py"], check=True)
+            subprocess.run(["python", "main_pipeline.py"], check=True)
 
             return redirect(url_for("upload_success", filename=file.filename))
 

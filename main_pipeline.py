@@ -17,7 +17,7 @@ input_files = os.listdir("input")
 if not input_files:
     print("Ingen tekstfiler funnet i input-mappen.")
     input_files = os.listdir("storage/raw_data")
-    subprocess.run(["python3", "modules/module0/pipeline.py"] + input_files, check=True)
+    subprocess.run(["python", "modules/module0/pipeline.py"] + input_files, check=True)
     folder_path = "output"
     for file in glob.glob(f"{folder_path}/*"):  # Henter alle filer i mappen
         os.remove(file)  # Sletter hver fil
@@ -26,21 +26,21 @@ if not input_files:
 
 # 1️⃣ Flytt alle filer til raw_data/
 print("✅ Initialiserer modul 1")
-subprocess.run(["python3", "modules/module1/pipeline.py"] + input_files, check=True)
+subprocess.run(["python", "modules/module1/pipeline.py"] + input_files, check=True)
 
 # 2️⃣ Kopier alle filer fra temp/ til output/
 raw_files = os.listdir("storage/raw_data")
 print("✅ Initialiserer modul 2")
-subprocess.run(["python3", "modules/module2/pipeline.py"] + raw_files, check=True)
+subprocess.run(["python", "modules/module2/pipeline.py"] + raw_files, check=True)
 
 # 3️⃣ Gi alle filer nytt navn i output/
 filtered_files = os.listdir("storage/filtered_data")
 print("✅ Initialiserer modul 3")
-subprocess.run(["python3", "modules/module3/pipeline.py"] + filtered_files, check=True)
+subprocess.run(["python", "modules/module3/pipeline.py"] + filtered_files, check=True)
 
 # 4️⃣ Flytt alle filer til output/
 processed_files = os.listdir("storage/processed_data")
 print("✅ Initialiserer modul 4")
-subprocess.run(["python3", "modules/module4/pipeline.py"] + processed_files, check=True)
+subprocess.run(["python", "modules/module4/pipeline.py"] + processed_files, check=True)
 
 print("✅ Hovedpipeline fullført! Sjekk output-mappen.")
