@@ -7,7 +7,7 @@ from modules.module1.move_file import MoveFileModule
 
 if len(sys.argv) < 2:
     print("❌ Ingen fil spesifisert.")
-    log_op(f"Ingen fil spesifisert", type="ERROR")
+    log_op(f"Ingen fil spesifisert", level="error", event="error")
     sys.exit(1)
 
 input_dir = "input"
@@ -22,4 +22,4 @@ if __name__ == "__main__":
         move_module.process(input_file, output_dir)  
 
     print("✅ Modul 1: Alle filer flyttet til storage/raw_data")
-    log_op(f"Alle filer flyttet til storage/raw_data", type="INFO")
+    log_op(f"Alle filer flyttet til storage/raw_data", level="info", category="filesystem", event="job_completed")

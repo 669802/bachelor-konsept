@@ -7,5 +7,5 @@ class MoveFileModule:
         new_file = os.path.join(output_dir, os.path.basename(input_file))
         shutil.move(input_file, new_file)
         print(f"🔄 Flyttet fil til: {new_file}")
-        log_op(f"Flyttet fil til: {new_file}", file=os.path.basename(input_file), type="INFO")
+        log_op(f"Flyttet fil til: {new_file}", file=os.path.basename(input_file), level="info", event="file_modify", category="filesystem")
         return new_file

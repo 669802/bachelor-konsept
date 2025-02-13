@@ -10,7 +10,7 @@ MAX_FILE_SIZE_MB = 1  # Ekskluder filer større enn 1 MB
 
 if len(sys.argv) < 2:
     print("❌ Ingen fil spesifisert.")
-    log_op(f"Ingen fil spesifisert", type="ERROR")
+    log_op(f"Ingen fil spesifisert", level="error", event="error")
     sys.exit(1)
 
 input_dir = "storage/raw_data"
@@ -26,18 +26,18 @@ if __name__ == "__main__":
         # 1️⃣ Filtrér basert på filtype
         if not any(file.endswith(ext) for ext in INCLUDED_EXTENSIONS):
             print(f"❌ Hopper over {file} (filtype ekskludert)")
-            log_op(f"Hopper over {file} (filtype ekskludert)", file=os.path.basename(input_file), type="WARNING", stage="1")
+            log_op(f"Hopper over {file} (filtype ekskludert)", file=os.path.basename(input_file), level="warning", category="filesystem", event="file_modify")
             continue
 
         # 2️⃣ Filtrér basert på innhold i filen
         file_size_mb = os.path.getsize(input_file) / (1024 * 1024)
         if file_size_mb > MAX_FILE_SIZE_MB:
             print(f"❌ Hopper over {file} (for stor: {file_size_mb:.2f} MB)")
-            log_op(f"Hopper over {file} (for stor: {file_size_mb:.2f} MB)", file=os.path.basename(input_file), type="WARNING", stage="1")
+            log_op(f"Hopper over {file} (for stor: {file_size_mb:.2f} MB)", file=os.path.basename(input_file), level="warning", category="filesystem", event="file_modify")
             continue
         
         copy_module.process(input_file, output_dir)
 
     
     print("✅ Modul 2: Alle filer kopiert til temp-filtered/")
-    log_op(f"Alle filer kopiert til temp-filtered/", type="INFO")
+    log_op(f"Alle filer kopiert til temp-filtered/", level="info", category="filesystem", event="job_completed")

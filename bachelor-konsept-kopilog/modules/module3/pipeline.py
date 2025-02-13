@@ -7,7 +7,7 @@ from modules.module3.rename_file import RenameFileModule
 
 if len(sys.argv) < 2:
     print("❌ Ingen filer spesifisert.")
-    log_op(f"Ingen fil spesifisert", type="ERROR")
+    log_op(f"Ingen fil spesifisert", level="error", event="error")
     sys.exit(1)
 
 input_dir = "storage/filtered_data"
@@ -24,4 +24,4 @@ if __name__ == "__main__":
         
     
     print("✅ Modul 3: Alle filer gitt nytt navn i storage/processed/")
-    log_op(f"Alle filer gitt nytt navn i storage/processed/", type="INFO")
+    log_op(f"Alle filer gitt nytt navn i storage/processed/", level="info", category="filesystem", event="job_completed")

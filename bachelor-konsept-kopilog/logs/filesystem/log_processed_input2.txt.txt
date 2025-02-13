@@ -1,0 +1,1 @@
+{"@timestamp": "2025-02-13T11:00:29.239323Z", "log.level": "info", "message": "Flyttet fil til: output\\processed_input2.txt", "event": {"category": "filesystem", "type": "file_modify"}, "process": {"pid": 3972, "name": "processed_input2.txt"}, "source": {"file": "move_file.py"}, "trace": {"id": "9fce6bd1-b785-452a-a64b-92bde6fa28f5"}}

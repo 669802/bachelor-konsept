@@ -1,11 +1,15 @@
 import time
 import os
 import sys
+import json
+import uuid
+from datetime import datetime
 
 if not os.path.exists("logs"):
     os.mkdir("logs")
 
-def log_op(message, file="System", type="Unspecified", stage="0"):
+def log_op(message, file="System", level="info", category="application", event="unspecified"):
     call_loc = sys._getframe(1)
-    with open(os.path.join(f"logs\\{stage}", f"log_{file}.txt"), "a", encoding="utf-8") as log:
-        log.write(time.strftime("[%Y-%m-%d %H:%M:%S]") + "[" + os.path.basename(os.path.dirname(call_loc.f_code.co_filename)) + "/" + os.path.basename(call_loc.f_code.co_filename) + "]" + f" {type} - {message}\n")
+    with open(os.path.join(f"logs\\{category}", f"log_{file}.txt"), "a", encoding="utf-8") as log:
+        json.dump({"@timestamp": datetime.utcnow().isoformat() + "Z", "log.level": level.lower(), "message": message, "event": {"category": category, "type": event}, "process": {"pid": os.getpid(), "name": file}, "source": {"file": os.path.basename(call_loc.f_code.co_filename)}, "trace": {"id": str(uuid.uuid4())}}, log)
+        log.write("\n")
