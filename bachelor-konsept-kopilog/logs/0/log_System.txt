@@ -1,0 +1,13 @@
+[2025-02-13 10:36:50][bachelor-konsept-kopilog/main_pipeline.py] INFO - Starter hovedpipen for alle filer samtidig...
+[2025-02-13 10:36:50][bachelor-konsept-kopilog/main_pipeline.py] INFO - Initialiserer modul 1
+[2025-02-13 10:36:50][module1/pipeline.py] INFO - Alle filer flyttet til storage/raw_data
+[2025-02-13 10:36:50][bachelor-konsept-kopilog/main_pipeline.py] INFO - Initialiserer modul 2
+[2025-02-13 10:36:50][module2/pipeline.py] INFO - Alle filer kopiert til temp-filtered/
+[2025-02-13 10:36:50][bachelor-konsept-kopilog/main_pipeline.py] INFO - Initialiserer modul 3
+[2025-02-13 10:36:50][module3/pipeline.py] INFO - Alle filer gitt nytt navn i storage/processed/
+[2025-02-13 10:36:50][bachelor-konsept-kopilog/main_pipeline.py] INFO - Initialiserer modul 4
+[2025-02-13 10:36:50][module4/pipeline.py] INFO - Alle filer flyttet til output/
+[2025-02-13 10:36:50][bachelor-konsept-kopilog/main_pipeline.py] INFO - Hovedpipeline fullført! Sjekk output-mappen.
+[2025-02-13 10:36:52][bachelor-konsept-kopilog/main_pipeline.py] INFO - Starter hovedpipen for alle filer samtidig...
+[2025-02-13 10:36:52][bachelor-konsept-kopilog/main_pipeline.py] WARNING - Ingen tekstfiler funnet i input-mappen.
+[2025-02-13 10:36:52][module0/pipeline.py] INFO - Tilbakestilte modul0

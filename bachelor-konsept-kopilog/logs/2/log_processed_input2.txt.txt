@@ -1,0 +1,4 @@
+[2025-02-13 10:36:50][module1/move_file.py] INFO - Flyttet fil til: storage/raw_data\input2.txt
+[2025-02-13 10:36:50][module2/copy_file.py] INFO - Kopierte fil til: storage/filtered_data\input2.txt
+[2025-02-13 10:36:50][module3/rename_file.py] INFO - Filen ble omdøpt til: storage/processed_data\processed_input2.txt
+[2025-02-13 10:36:50][module4/move_file.py] INFO - Flyttet fil til: output\processed_input2.txt

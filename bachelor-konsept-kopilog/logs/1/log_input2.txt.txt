@@ -1,0 +1,1 @@
+[2025-02-13 10:36:52][module1/move_file.py] INFO - Flyttet fil til: input\input2.txt

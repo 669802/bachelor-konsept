@@ -1,0 +1,3 @@
+[2025-02-13 10:36:50][module1/move_file.py] INFO - Flyttet fil til: storage/raw_data\input0.png
+[2025-02-13 10:36:50][module2/pipeline.py] WARNING - Hopper over input0.png (for stor: 2.47 MB)
+[2025-02-13 10:36:52][module1/move_file.py] INFO - Flyttet fil til: input\input0.png
